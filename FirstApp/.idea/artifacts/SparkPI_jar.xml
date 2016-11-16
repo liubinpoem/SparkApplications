@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SparkPI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SparkPI_jar</output-path>
+    <root id="archive" name="SparkPI.jar">
+      <element id="module-output" name="SparkPI" />
+    </root>
+  </artifact>
+</component>
