@@ -16,12 +16,16 @@ object WordCount {
     val master="hdfs://192.168.1.101:9000"
     val out="/QuaraQuestionPairs/out"
     deleteFile(master,out)
+    countWord(master+in,master+out)
+  }
+
+  def countWord(inpath:String,outpath:String): Unit ={
     val conf=new SparkConf().setAppName("WordCount")
     val sc=new SparkContext(conf)
-    val lines=sc.textFile(master+in)
+    val lines=sc.textFile(inpath)
     val words=lines.flatMap(line=>splitline(line).split(" "))
     val counts=words.map(word=>(word,1)).reduceByKey((x,y)=>x+y)
-    counts.saveAsTextFile(master+out)
+    counts.saveAsTextFile(outpath)
   }
 
   //define a function for split line into words
