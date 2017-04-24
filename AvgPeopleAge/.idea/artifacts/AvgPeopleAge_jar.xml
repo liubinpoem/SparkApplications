@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AvgPeopleAge:jar">
+    <output-path>Z:/SparkCode/AvgPeopleAge/out/artifacts/AvgPeopleAge_jar</output-path>
+    <root id="archive" name="AvgPeopleAge.jar">
+      <element id="module-output" name="AvgPeopleAge" />
+    </root>
+  </artifact>
+</component>
